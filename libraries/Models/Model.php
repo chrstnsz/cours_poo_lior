@@ -14,7 +14,7 @@ abstract class Model
     }
 
     /**
-     *  Récupération de l'article en question
+     *  Récupération
      *
      * @param integer $id
      * @return array
@@ -23,7 +23,7 @@ abstract class Model
     {
         $query = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE id = :id");
 
-        // On exécute la requête en précisant le paramètre :article_id 
+        // On exécute la requête en précisant le paramètre :id
         $query->execute(['id' => $id]);
 
         // On fouille le résultat pour en extraire les données réelles de l'article

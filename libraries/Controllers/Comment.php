@@ -1,14 +1,9 @@
 <?php
 namespace Controllers;
 
-class Comment {
+class Comment extends Controller {
 
-    /* protected $modelName = \Models\Comment::class; */
-     
-    public function __construct()
-    {
-        $this->model = new \Models\Comment();
-    }
+    protected $modelName = \Models\Comment::class;
     
     public function insert()
     {
